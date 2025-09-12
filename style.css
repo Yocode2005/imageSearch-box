@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #7E089F;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 60px auto 30px;
+    font-weight: 600;
+}
+
+/* 🔎 Search Bar */
+form {
+    width: 90%;
+    max-width: 600px;
+    height: 60px;
+    background-color: #434989;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 40px; /* ✅ clear gap below */
+    overflow: hidden;
+}
+
+form input {
+    width: calc(100% - 120px);
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+form button {
+    width: 120px;
+    height: 100%;
+    background: #ff3929;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+::placeholder {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* 📷 Image Grid */
+#search-result {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 40px;    /* ✅ images below form */
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+#search-result a {
+    display: block;
+}
+
+#search-result img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+#search-result img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔘 Show More Button */
+#show-more-btn {
+    background: #ff3929;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 20px auto 60px;
+    cursor: pointer;
+    display: none;
+}
+
+/* 📱 Responsive */
+
+/* Tablet (2 columns) */
+@media (max-width: 768px) {
+    #search-result {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #search-result img {
+        max-width: 200px;
+        height: 200px;
+    }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        margin: 40px auto 20px;
+    }
+    form {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    form input {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    form button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+    }
+    #search-result {
+        grid-template-columns: 1fr;
+    }
+    #search-result img {
+        max-width: 100%;
+        height: auto;
+    }
+}
