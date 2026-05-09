@@ -7,7 +7,7 @@
 
 body { //add css for body
     background: #7E089F; // for background color
-    color: #fff;
+    color: #fff; // for white color
     display: flex;
     flex-direction: column;
     align-items: center;
