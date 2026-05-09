@@ -8,7 +8,7 @@
 body { //add css for body
     background: #7E089F; // for background color
     color: #fff; // for white color
-    display: flex;
+    display: flex; // add flex property  for box
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
