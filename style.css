@@ -15,7 +15,7 @@ body { //add css for body
 }
 
 h1 { // propert for h1 tag
-    text-align: center;
+    text-align: center; // sabhi ko center me lane ke liye
     margin: 60px auto 30px;
     font-weight: 600;
 }
