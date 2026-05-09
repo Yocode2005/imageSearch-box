@@ -14,7 +14,7 @@ body { //add css for body
     min-height: 100vh;
 }
 
-h1 {
+h1 { // propert for h1 tag
     text-align: center;
     margin: 60px auto 30px;
     font-weight: 600;
