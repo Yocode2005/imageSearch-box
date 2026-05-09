@@ -6,7 +6,7 @@
 }
 
 body { //add css for body
-    background: #7E089F;
+    background: #7E089F; // for background color
     color: #fff;
     display: flex;
     flex-direction: column;
